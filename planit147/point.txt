@@ -1,0 +1,5 @@
+- visual 영역의 이미지 나타나기 : gsap, stagger, random
+- 전체 레이아웃은 grid 활용
+- 따라다니는 오브젝트 : js
+- GSAP ScrollTrigger
+- swiper.js
