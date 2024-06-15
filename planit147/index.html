@@ -8,9 +8,14 @@
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/common.css">
 	<link rel="stylesheet" href="./css/style.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+	<script src="./js/script.js" defer></script>
 </head>
 
 <body>
+	<div class="fog"></div>
 	<header id="header">
 		<div class="inner">
 			<nav>
@@ -35,44 +40,45 @@
 	<main id="main">
 		<section class="visual">
 			<div class="inner">
-				<div class="visual-title">
-					<h2>
-						<span class="plan">PLAN</span>
-						<span class="it">IT</span>
-						<span class="num147">147</span>
-					</h2>
-					<div class="visual-title-con">
-						<strong>Beauty Brand <b>Incubator</b></strong>
-						<p>당신의 뷰티 비즈니스가 쉬워지는 곳</p>
+				<div class="visual-grid">
+					<div class="visual-title">
+						<h2>
+							<span class="plan"><i class="hidden">PLAN</i></span>
+							<span class="it"><i class="hidden">IT</i></span>
+							<span class="num147"><i class="hidden">147</i></span>
+						</h2>
+						<div class="visual-title-con">
+							<strong>Beauty Brand <b>Incubator</b></strong>
+							<p>당신의 뷰티 비즈니스가 쉬워지는 곳</p>
+						</div>
 					</div>
+					<ul class="visual-img-list">
+						<li>
+							<figure><img src="./img/visual_img01.png" alt="" /></figure>
+						</li>
+						<li>
+							<figure><img src="./img/visual_img02.png" alt="" /></figure>
+						</li>
+						<li>
+							<figure><img src="./img/visual_img03.png" alt="" /></figure>
+						</li>
+						<li>
+							<figure><img src="./img/visual_img04.png" alt="" /></figure>
+						</li>
+						<li>
+							<figure><img src="./img/visual_img05.png" alt="" /></figure>
+						</li>
+						<li>
+							<figure><img src="./img/visual_img06.png" alt="" /></figure>
+						</li>
+						<li>
+							<figure><img src="./img/visual_img07.png" alt="" /></figure>
+						</li>
+						<li>
+							<figure><img src="./img/visual_img08.png" alt="" /></figure>
+						</li>
+					</ul>
 				</div>
-
-				<ul class="visual-img-list">
-					<li>
-						<figure><img src="./img/visual_img01.png" alt="" /></figure>
-					</li>
-					<li>
-						<figure><img src="./img/visual_img02.png" alt="" /></figure>
-					</li>
-					<li>
-						<figure><img src="./img/visual_img03.png" alt="" /></figure>
-					</li>
-					<li>
-						<figure><img src="./img/visual_img04.png" alt="" /></figure>
-					</li>
-					<li>
-						<figure><img src="./img/visual_img05.png" alt="" /></figure>
-					</li>
-					<li>
-						<figure><img src="./img/visual_img06.png" alt="" /></figure>
-					</li>
-					<li>
-						<figure><img src="./img/visual_img07.png" alt="" /></figure>
-					</li>
-					<li>
-						<figure><img src="./img/visual_img08.png" alt="" /></figure>
-					</li>
-				</ul>
 			</div>
 		</section>
 		<!-- //end: visual -->
