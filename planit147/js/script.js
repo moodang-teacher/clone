@@ -47,6 +47,55 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 	visualTL.from('.btn-gotop', { xPercent: 300, autoAlpha: 0 }, '+=1');
 
+	// sec-title
+	const secTitle = gsap.utils.toArray('.sec-title');
+
+	secTitle.forEach((title) => {
+		gsap.from(title, {
+			y: 100,
+			autoAlpha: 0,
+			ease: 'none',
+			duration: 1,
+			scrollTrigger: {
+				trigger: title,
+				// markers: true,
+				start: 'top 60%',
+			},
+		});
+	});
+
+	// text
+	const aboutText = gsap.utils.toArray('.about-con-text');
+	aboutText.forEach((text) => {
+		gsap.from(text, {
+			y: 100,
+			autoAlpha: 0,
+			ease: 'none',
+			duration: 1,
+			scrollTrigger: {
+				trigger: text,
+				// markers: true,
+				start: 'top 70%',
+			},
+		});
+	});
+	// figure
+	const aboutPic = gsap.utils.toArray('.about-con figure');
+	aboutPic.forEach((pic) => {
+		gsap.from(pic, {
+			y: 100,
+			autoAlpha: 0,
+			ease: 'none',
+			duration: 1,
+			delay: 0.5,
+			scrollTrigger: {
+				trigger: pic,
+				// markers: true,
+				start: 'top 70%',
+			},
+		});
+	});
+
 	// fog moving
 	const fog = document.querySelector('.fog');
 	let x = 0;

@@ -44,6 +44,7 @@ button {
 body {
 	font: 1rem/1.6 'Pretendard', sans-serif;
 	overflow-x: hidden;
+	word-break: keep-all;
 }
 
 img {
