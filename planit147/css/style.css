@@ -346,3 +346,73 @@
 	bottom: 0;
 	right: 0;
 }
+
+.feature {
+	padding: 100px 0;
+	/* border: 1px solid #000; */
+}
+
+.feature-list {
+	display: flex;
+}
+
+.feature-list li {
+	flex: 1 1 30%;
+	aspect-ratio: 1/1.28;
+	padding: 382px 100px 80px;
+	position: relative;
+	transition: 1s;
+}
+
+.feature-list li::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background: no-repeat 0 0 / cover;
+	transition: 1s;
+}
+.feature-list li:nth-child(1)::before {
+	background-image: url(../img/sect02_bg01.jpg);
+}
+.feature-list li:nth-child(2)::before {
+	background-image: url(../img/sect02_bg02.jpg);
+}
+.feature-list li:nth-child(3)::before {
+	background-image: url(../img/sect02_bg03.jpg);
+}
+
+.feature-list li dl {
+	opacity: 0.2;
+	color: #fff;
+	text-align: center;
+	transition: 1s;
+}
+.feature-list li dl dt {
+	font-weight: 500;
+	font-size: 100px;
+}
+
+.feature-list li dl dt + dt {
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.feature-list li dl dd {
+	margin-top: 300px;
+	padding: 0 80px;
+}
+
+.feature-list li:hover {
+	background: var(--color-grey1);
+}
+.feature-list li:hover::before {
+	opacity: 0;
+}
+.feature-list li:hover dl {
+	opacity: 1;
+}
