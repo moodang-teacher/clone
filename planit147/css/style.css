@@ -426,3 +426,44 @@
 .feature-list li:hover dl {
 	opacity: 1;
 }
+
+.update-slide-wrap {
+	margin-top: 100px;
+}
+
+.update-slider {
+	overflow: visible;
+	/* background: tomato; */
+	padding-bottom: 70px;
+}
+
+.update-slider .controls {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	gap: 10px;
+	width: 200px;
+}
+
+.update-slider .swiper-button-prev,
+.update-slider .swiper-button-next {
+	transform: scale(0.8);
+	filter: grayscale(1);
+	z-index: 11;
+}
+
+.update-slider .swiper-pagination {
+	position: static;
+	font-weight: 600;
+	font-size: 22px;
+	color: #6f6f6f;
+	/* border: 1px solid #000; */
+}
+
+.update-slider .swiper-slide {
+}
+
+.update-slider .swiper-slide figure img {
+	width: 100%;
+}
