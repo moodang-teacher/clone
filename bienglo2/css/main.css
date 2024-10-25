@@ -1,0 +1,136 @@
+@charset 'utf-8';
+
+.inner {
+  width: 182rem;
+  margin: 0 auto;
+  background: rgba(255, 255, 0, 0.2);
+}
+
+#header .inner {
+  padding: 0 6rem;
+}
+
+#header nav {
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo > a {
+  display: block;
+  width: 12rem;
+  height: 4rem;
+  background: url(../images/logo.svg) no-repeat 0 0 / contain;
+}
+
+.gnb {
+  display: flex;
+  margin-right: auto;
+  margin-left: 7.4rem;
+}
+
+.gnb > li > a {
+  display: block;
+  padding: 10px 3.1rem;
+  /* border: 1px solid #000; */
+  font-weight: 500;
+  color: #000;
+}
+
+.submenu {
+  display: none;
+}
+
+.utilmenu {
+  display: flex;
+}
+
+.utilmenu li a {
+  display: block;
+  padding: 10px 15px;
+  font-weight: 500;
+  font-size: 1.55rem;
+}
+
+.utilmenu li:nth-child(2) a {
+  display: flex;
+  gap: 6px;
+}
+
+.utilmenu li:nth-child(2) a::after {
+  content: "↗";
+}
+
+/* Visual */
+
+.visual {
+  height: 79.6rem;
+}
+
+.visual-slider-wrap {
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.visual-slider-wrap .swiper-slide {
+  position: relative;
+}
+
+.visual-slider-wrap .swiper-slide .visual-text {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  left: 29rem;
+}
+
+.visual-slider-wrap .swiper-slide .visual-text p {
+  font-family: Cormorant;
+  font-size: 2.2rem;
+}
+.visual-slider-wrap .swiper-slide .visual-text h2 {
+  font-weight: 700;
+  font-size: 10rem;
+}
+.visual-slider-wrap .swiper-slide .visual-text h2 + p {
+  font-family: Pretendard;
+  font-weight: 500;
+  font-size: 2.2rem;
+}
+
+.visual-slider-wrap .swiper-slide figure {
+  width: 100%;
+  height: 100%;
+}
+.visual-slider-wrap .swiper-slide figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 2.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.scroll-down strong {
+  display: flex;
+  gap: 5px;
+}
+
+/* About */
+
+.about .inner {
+  width: 124rem;
+}
+
+.about-con h3 {
+  font-family: Cormorant;
+  font-size: 9rem;
+  font-style: italic;
+}
