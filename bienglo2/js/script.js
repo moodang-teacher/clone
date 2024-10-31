@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
   // Visual Slider
   const visualSwiper = new Swiper(".visual-slider", {
     loop: true,
@@ -20,6 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: "auto",
     spaceBetween: 20,
     loop: true,
+    autoplay: {
+      delay: 1000,
+    },
+    speed: 2600,
+
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -56,5 +63,64 @@ document.addEventListener("DOMContentLoaded", function () {
     repeat: -1,
     repeatDelay: 2,
     ease: "elastic.out(1,0.3)",
+  });
+
+  // 1. 중복되는 각각의 선택자를 배열로
+  const leftTitle = gsap.utils.toArray(".about-con h3 span:first-child");
+  leftTitle.forEach((title) => {
+    gsap.to(title, {
+      x: -300,
+      duration: 4,
+      ease: "none",
+
+      scrollTrigger: {
+        trigger: title,
+        // markers: true,
+        start: "top 50%",
+        scrub: 1.5,
+      },
+    });
+  });
+
+  const rightTitle = gsap.utils.toArray(".about-con h3 span:last-child");
+  rightTitle.forEach((title) => {
+    gsap.to(title, {
+      x: 300,
+      duration: 4,
+      ease: "none",
+
+      scrollTrigger: {
+        trigger: title,
+        // markers: true,
+        start: "top 50%",
+        scrub: 1.5,
+      },
+    });
+  });
+
+  // 2. 중복되는 부모요소를 배열로, 그 부모를 기준으로 필터링
+  const aboutCon = gsap.utils.toArray(".about-con-item");
+  aboutCon.forEach((con) => {
+    gsap
+      .timeline({
+        defaults: { duration: 2, ease: "power2.out" },
+
+        scrollTrigger: {
+          trigger: con,
+          markers: true,
+          start: "top 70%",
+        },
+      })
+      .from(con.querySelector("figure"), {
+        scale: 0.7,
+      })
+      .from(
+        con.querySelector("img"),
+        {
+          autoAlpha: 0,
+          scale: 1.6,
+        },
+        "<"
+      );
   });
 });

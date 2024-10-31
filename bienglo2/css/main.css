@@ -124,7 +124,9 @@
 }
 
 /* About */
-
+.about {
+  padding: 20rem 0;
+}
 .about .inner {
   width: 124rem;
 }
@@ -133,4 +135,46 @@
   font-family: Cormorant;
   font-size: 9rem;
   font-style: italic;
+  line-height: 1;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+.about-con h3 span {
+  display: block;
+}
+
+.about-con h3 span strong {
+  font-family: Pretendard;
+}
+
+.about-con-item {
+  display: flex;
+  align-items: center;
+  margin: 18rem 0;
+}
+
+.about-con:nth-child(even) .about-con-item {
+  flex-direction: row-reverse;
+}
+
+.about-con-item figure {
+  width: 46rem;
+  aspect-ratio: 1/1.4;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+
+.about-con-item figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-con-item .text-box {
+  width: 78rem;
+  background: #5f5;
+  padding: 0 12.4rem;
 }
