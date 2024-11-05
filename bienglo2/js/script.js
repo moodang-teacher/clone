@@ -154,21 +154,31 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // lenis.js
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  });
+  // const lenis = new Lenis({
+  //   duration: 1.2,
+  //   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  // });
 
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
+  // function raf(time) {
+  //   lenis.raf(time);
+  //   requestAnimationFrame(raf);
+  // }
 
-  requestAnimationFrame(raf);
+  // requestAnimationFrame(raf);
+
+  // lenis.on("scroll", ScrollTrigger.update);
+
+  // gsap.ticker.add((time) => {
+  //   lenis.raf(time * 1000);
+  // });
+
+  const lenis = new Lenis();
 
   lenis.on("scroll", ScrollTrigger.update);
 
   gsap.ticker.add((time) => {
     lenis.raf(time * 1000);
   });
+
+  gsap.ticker.lagSmoothing(0);
 });
