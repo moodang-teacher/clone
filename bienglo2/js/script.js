@@ -33,8 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     breakpoints: {
       1200: {
-        slidesPerView: 4,
-        spaceBetween: 30,
+        spaceBetween: 50,
       },
     },
   });
@@ -107,8 +106,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         scrollTrigger: {
           trigger: con,
-          markers: true,
+          // markers: true,
           start: "top 70%",
+          toggleActions: "play none reverse none",
         },
       })
       .from(con.querySelector("figure"), {
@@ -121,6 +121,54 @@ document.addEventListener("DOMContentLoaded", function () {
           scale: 1.6,
         },
         "<"
-      );
+      )
+      .from(con.querySelector("h4"), { y: 50, autoAlpha: 0, duration: 1 }, "<+=0.5")
+      .from(con.querySelector("p"), { y: 50, autoAlpha: 0, duration: 1 }, "-=0.7")
+      .from(con.querySelector("p+p"), { y: 50, autoAlpha: 0, duration: 1 }, "-=0.7");
+  });
+
+  // Get in Touch
+  gsap.from(".get-in-touch-banner", {
+    clipPath: "inset(100% 0%)",
+    duration: 2,
+    ease: "power2.out",
+
+    scrollTrigger: {
+      trigger: ".get-in-touch",
+      // markers: true,
+      start: "top 60%",
+    },
+  });
+
+  // go top
+  gsap.from(".btn-top", {
+    autoAlpha: 0,
+
+    scrollTrigger: {
+      trigger: ".about-con-wrap",
+      // markers: true,
+      start: "top 50%",
+      end: "bottom 20%",
+      toggleActions: "play none play reverse",
+    },
+  });
+
+  // lenis.js
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
+  lenis.on("scroll", ScrollTrigger.update);
+
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
   });
 });
